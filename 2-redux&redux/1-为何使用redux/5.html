@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function square(n) {
+        return n * n;
+    }
+
+    let nums = [2, 4, 6, 8]
+    function squareItems(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = square(arr[i])
+        }
+        return arr
+    }
+    squareItems(nums);
+    // nums 会发现原先的nums数组 会被修改了，不是一个纯函数 因为我们在当前作用域之外
+    // 修改了状态
+
+
+    function pureSquareItems(arr) {
+        return arr.map(square)
+    }
+
+    let newNums = [2, 4, 6, 8]
+
+    pureSquareItems(newNums)
+</script>
+
+</html>

@@ -1,0 +1,9 @@
+redux是一个非常强大的工具 用于管理应用内的状态 。redux api使你的应用程序状态更加可预测，而且还会学习非常
+有价值的函数式编程主题。1.先来看怎么使用redux和使用redux会带来什么好处。
+2.深入讲解如何在react中使用redux
+
+第 1 节课 - 介绍使用 Redux 的优势
+第 2 节课 - 详细讲解 Redux 的核心方法：action、reducer 和 store
+第 3 节课 - 通过 react-redux 连接 React 和 Redux
+第 4 节课 - 在 Redux 中创建基本模式，例如 reducer 组合和标准化模式
+第 5 节课 - 介绍使用 Redux 的 React 应用中的中间件和其他增强功能

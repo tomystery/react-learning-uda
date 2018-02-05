@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+</body>
+<script>
+    const iceCreamStats = [
+        {
+            name: 'Amanda',
+            gallonsEaten: 3.8
+        },
+        {
+            name: 'Geoff',
+            gallonsEaten: 5.2
+        },
+        {
+            name: 'Tyler',
+            gallonsEaten: 1.9
+        },
+        {
+            name: 'Richard',
+            gallonsEaten: 7923
+        }
+    ];
+
+  /*   iceCreamStats.reduce(<function>,<starting-value>)
+    reduce有两个参数：一个回调函数和一个可选的起始值，由于想获得冰淇淋的总加轮数，
+    将起始值设为0，回调函数也有两个参数，累计值和从数组中传入的当前值 
+     iceCreamStats.reduce(（accumulator,currentValue）=>{
+
+     },0)
+     第一次调用时，accumulator将设为起始，值即为0，当前值即为iceCreamStats这个对象。现在
+     重要的是从此函数返回一些东西，返回的东西将成为accumulator参数的值，对于此调用，我们将结合
+     accumulator和currentValues.gallonsEaten属性，然后基本上就完成了，callback函数将对
+     冰淇淋统计数组中的每一项调用，并最终在完成时返回总结过
+     */
+
+    iceCreamStats.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue.gallonsEaten;
+        }, 0);
+
+
+
+        const musicData = [
+                { artist: 'Adele', name: '25', sales: 1731000 },
+                { artist: 'Drake', name: 'Views', sales: 1608000 },
+                { artist: 'Beyonce', name: 'Lemonade', sales: 1554000 },
+                { artist: 'Chris Stapleton', name: 'Traveller', sales: 1085000 },
+                { artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000 },
+                { artist: 'Original Broadway Cast Recording', name: 'Hamilton: An American Musical', sales: 820000 },
+                { artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000 },
+                { artist: 'Prince', name: 'The Very Best of Prince', sales: 668000 },
+                { artist: 'Rihanna', name: 'Anti', sales: 603000 },
+                { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }
+            ];
+
+         /*  var totalAlbumSales=musicData.reduce((accumulator,currentValue)=>{
+                return accumulator+currentValue.sales;
+            },0) */
+
+var totalAlbumSales= musicData.filter((c)=>c.artist.length+c.name.length<25).reduce((accumulator,currentValue)=>{return accumulator + currentValue.sales;},0)
+
+           
+  const data = [
+        { name: 'Tyler', favoriteIceCreams: ['Strawberry', 'Vanilla', 'Chocolate', 'Cookies & Cream'] },
+        { name: 'Richard', favoriteIceCreams: ['Cookies & Cream', 'Mint Chocolate Chip', 'Chocolate', 'Vanilla'] },
+        { name: 'Amanda', favoriteIceCreams: ['Chocolate', 'Rocky Road', 'Pistachio', 'Banana'] },
+        { name: 'Andrew', favoriteIceCreams: ['Vanilla', 'Chocolate', 'Mint Chocolate Chip'] },
+        { name: 'David', favoriteIceCreams: ['Vanilla', 'French Vanilla', 'Vanilla Bean', 'Strawberry'] },
+        { name: 'Karl', favoriteIceCreams: ['Strawberry', 'Chocolate', 'Mint Chocolate Chip'] }
+    ];
+   
+   
+
+</script>
+</html>
