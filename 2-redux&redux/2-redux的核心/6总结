@@ -1,0 +1,9 @@
+## 总结
+
+我们在这节课介绍了很多内容。总结如下：
+
+* reducer 负责决定 store 的形状和初始状态以及何时派遣 action，它返回的状态将变成 store 的新状态。
+* Redux 的状态存储在 Store 中。
+* action 是信息载荷，描述了发生在应用中的状态更改事件。
+* store 可以用来派遣 action，获取 store 的当前状态，并订阅任何更改。
+现在，让我们用 react-redux 绑定将你的 Redux 应用与 React 连接起来吧！
