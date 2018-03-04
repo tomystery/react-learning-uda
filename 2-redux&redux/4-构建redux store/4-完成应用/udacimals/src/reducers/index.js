@@ -15,7 +15,7 @@ function food(state = {}, action) {
     /* now-他将一些状态作为输入 初始状态设为空，并接受一个action ,食物reducer将
     负责为我们处理食谱*/
     switch (action.type) {
-        case 'ADD_recipe':
+        case ADD_RECIPE:
             const { recipe } = action //从action抓取食谱
             return {
                 ...state,//返回一个全新的对象，并且无论当前状态是什么，我们都将它赋值给state
