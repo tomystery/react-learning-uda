@@ -1,0 +1,29 @@
+<!--
+ * @Description: 
+ * @Author: ranyang
+ * @Date: 2020-04-26 16:45:17
+ * @LastEditTime: 2020-04-26 16:47:31
+ * @FilePath: /12-uda/03-react-learning-uda/2-react&redux/1-为何使用redux/6.1reduceRight方法.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+const array1 = [[0, 1], [2, 3], [4, 5]].reduceRight(
+  (accumulator, currentValue) =>  {
+      console.log(accumulator,currentValue);
+    return accumulator.concat(currentValue)
+  },[222,222] 
+);
+
+console.log(array1);
+// expected output: Array [4, 5, 2, 3, 0, 1]
+</script>
+</html>

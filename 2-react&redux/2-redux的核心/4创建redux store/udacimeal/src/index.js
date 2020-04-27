@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: ranyang
+ * @Date: 2020-04-20 09:42:00
+ * @LastEditTime: 2020-04-27 10:43:13
+ * @FilePath: /12-uda/03-react-learning-uda/2-react&redux/2-redux的核心/4创建redux store/udacimeal/src/index.js
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -8,9 +15,12 @@ import registerServiceWorker from './registerServiceWorker';
 import {createStore} from 'redux';
 import reducer from './reducers'
 
+const store = createStore(reducer);
+console.log(store);//查看store上有那些属性
+
 
 //如果redux_devtools_extension存在于window对象则直接调用它，它的作用是使我们可以直接使用redux工具
-const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+// const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,17 +1,28 @@
+/*
+ * @Description: 
+ * @Author: ranyang
+ * @Date: 2020-04-20 09:42:00
+ * @LastEditTime: 2020-04-27 12:10:26
+ * @FilePath: /12-uda/03-react-learning-uda/2-react&redux/2-redux的核心/5全组合到一起/udacimeal/src/index.js
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
+// 安装redux-devtools-extension的可视化工具。
+import { composeWithDevTools } from 'redux-devtools-extension'
 
 //导入
 import {createStore} from 'redux';
 import reducer from './reducers'
 
 
+
+
 //如果redux_devtools_extension存在于window对象则直接调用它，它的作用是使我们可以直接使用redux工具
-const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
-console.log(store.getState())
+const store = createStore(reducer, composeWithDevTools())
+
 
 ReactDOM.render(<App  store={store}/>, document.getElementById('root'));
 registerServiceWorker();

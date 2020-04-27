@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Author: ranyang
+ * @Date: 2020-04-20 09:42:00
+ * @LastEditTime: 2020-04-26 17:52:40
+ * @FilePath: /12-uda/03-react-learning-uda/2-react&redux/2-redux的核心/2创建action/2创建action.md
+ -->
 # 2.创建action
 
 ## video1
@@ -36,7 +43,7 @@ const myAction = {
 ## Action Creators
 Redux action 是 JavaScript 对象，用于描述应该更新应用状态的任何事件。但是，普通对象不易移植。为了使 action 更易移植并更容易测试，它们通常封装在函数里。这些函数称为 action creator。术语“action creator”很好理解，因为它就是一个创建和返回 action 的函数。
 
-```
+```js
 const submitUser = user => ({
   type: SUBMIT_USER,
   user
@@ -44,3 +51,8 @@ const submitUser = user => ({
 ```
 
 现在，只要我们需要 SUBMIT_USER action，就可以调用 submitUser() 函数，向其传入 user，它将生成该 action！
+
+## 开始构建项目
+* reactnd-udacimeals-complete-master 是官网上的项目，已经构建完成的
+* udacimeals-mine 是以前看视频的时候写的
+* udacimeals-again 是现在(2020-04-26)再一次看视频写的 
